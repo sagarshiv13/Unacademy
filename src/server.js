@@ -1,9 +1,9 @@
 const app = require("./index")
 
 const connect = require("./db")
+const port = process.env.PORT || 2445
 
-
-app.listen(2445,async() =>{
+app.listen(port,async() =>{
     try{
         await connect()
         console.log("running on port 2345")
